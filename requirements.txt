@@ -3,3 +3,4 @@ llama-index==0.6.5
 streamlit==1.16.0
 streamlit-chat==0.0.2.2
 altair==4.1.0
+transformers==4.29.0
