@@ -1,4 +1,4 @@
-import openai
+#import openai
 from langchain.chat_models import ChatOpenAI
 from llama_index import Document, SimpleDirectoryReader, GPTVectorStoreIndex, LLMPredictor, ServiceContext, \
     QuestionAnswerPrompt
@@ -14,7 +14,7 @@ from streamlit_chat import message
 import requests
 # import simplejson as json
 
-key = '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'
+key = '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'
 os.environ['OPENAI_API_KEY'] = key
 
 # LLM
