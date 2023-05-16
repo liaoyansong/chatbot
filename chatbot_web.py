@@ -14,7 +14,7 @@ from streamlit_chat import message
 import requests
 # import simplejson as json
 
-key = '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'
+key = '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'
 os.environ['OPENAI_API_KEY'] = key
 
 # LLM
