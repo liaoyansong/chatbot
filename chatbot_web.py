@@ -1,4 +1,4 @@
-#import openai
+import openai
 from langchain.chat_models import ChatOpenAI
 from llama_index import Document, SimpleDirectoryReader, GPTVectorStoreIndex, LLMPredictor, ServiceContext, \
     QuestionAnswerPrompt
@@ -25,10 +25,10 @@ num_output = 256
 prompt_helper = PromptHelper(max_input_size, num_output, 20)
 service_context = ServiceContext.from_defaults(llm_predictor=llm_predictor, prompt_helper=prompt_helper)
 # 生成index
-documents = SimpleDirectoryReader('./data').load_data()
-index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
+# documents = SimpleDirectoryReader('./data').load_data()
+# index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
 # 保存index
-index.storage_context.persist(persist_dir="./index")
+# index.storage_context.persist(persist_dir="./index")
 
 # 读取index
 storage_context = StorageContext.from_defaults(persist_dir="./index")
