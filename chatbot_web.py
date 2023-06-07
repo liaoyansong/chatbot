@@ -56,7 +56,7 @@ def generate_response(prompt):
     response = str(query_engine.query(prompt))
     return response
 
-st.title("眼底疾病诊断系统")
+st.title("眼底疾病问答系统")
 
 # 不显示聊天记录
 # prompt = st.text_input("You:")
