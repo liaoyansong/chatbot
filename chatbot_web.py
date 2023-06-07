@@ -4,6 +4,8 @@ from llama_index import Document, SimpleDirectoryReader, GPTVectorStoreIndex, LL
     QuestionAnswerPrompt
 # from langchain import OpenAI
 import os
+os.environ["http_proxy"]="http://127.0.0.1:7890"
+os.environ["https_proxy"]="http://127.0.0.1:7890"
 from llama_index import PromptHelper
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader
@@ -14,8 +16,8 @@ from streamlit_chat import message
 import requests
 # import simplejson as json
 
-key = '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'
-os.environ['OPENAI_API_KEY'] = key
+os.environ['OPENAI_API_KEY'] = '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'
+
 
 # LLM
 llm_predictor = LLMPredictor(llm=ChatOpenAI(temperature=0, model_name="gpt-3.5-turbo"))
